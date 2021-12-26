@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title> Exemplo 7 </title>
+	
+	<script type="text/javascript">
+	//função que recebe dois valores numéricos (inicial e final)
+	//e mostra os números pares do intervalo
+	function numerosPares(num1, num2) 
+	{
+		//declaração e inicialização das variáveis
+		var msg = "";
+		var soma = 0;
+		var cont = 0;
+		
+		//teste básico para tratar a entrada invertida
+		if (num1 > num2) {
+			var aux = num1;
+			num1 = num2;
+			num2 = aux;
+		}
+		
+		//processamento
+		//msg += 2; (é o mesmo que) msg = msg + 2;
+		for (i=num1; i<=num2; i++) {
+			if (i % 2 == 0) {
+				msg += i + " - ";
+				soma += i;
+				cont++;
+			}
+		}
+		
+		//saída
+		alert(msg);
+		alert("Qtd de pares: " + cont);
+		alert("Soma dos pares: " + soma);
+	}
+	// ---------------------------------------------------------
+	</script>
+</head>
+ 
+<body>
+
+	<h1>Orientação a Objetos com JS</h1>
+	Podemos interagir com os elementos do HTML: <br />
+	- gerenciadores de eventos (onclick, onchange, onfocus, etc) <br />
+	- funções da linguagem e definidas pelo usuário
+	<br /><br />
+	
+	<form name="f1">
+		Informe o 1ro número: <br />
+		<input type="text" name="n1" />
+		<br /><br />
+		
+		Informe o 2do número: <br />
+		<input type="text" name="n2" />
+		<br /><br />
+		
+		<input type="button" name="btn" value="Ok" onclick="numerosPares(n1.value, n2.value);" />
+	</form>
+	
+</body>
+</html>

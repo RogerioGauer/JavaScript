@@ -1,0 +1,22 @@
+<script>
+var peso = prompt("Digite o peso em kilos, (por exemplo: 72.5):");
+var altura = prompt("Digite a altura em metros, (por exemplo: 1.70):");
+var imc = (peso / (altura * altura));
+alert("O IMC é " + imc); 
+
+/* Código funcional, porém com imperfeições.
+if(imc < 18.5) alert("Abaixo do peso");
+if(imc >= 18.5 && imc <= 24.9) alert("Peso normal");
+if(imc >= 25 && imc <= 29.9) alert("Sobre peso");
+if(imc >= 30 && imc <=34.9) alert("Obesidade grau 1");
+if(imc >=35 && imc <=39.9) alert("Obesidade grau 2");
+if(imc >= 40) alert("Obesidade grau 3");    
+*/
+
+if(imc < 18.5) alert("Abaixo do peso");
+else if(imc <= 24.9) alert("Peso normal");
+else if(imc <= 29.9) alert("Sobre peso");
+else if(imc <= 34.9) alert("Obesidade grau 1");
+else if(imc <= 39.9) alert("Obesidade grau 2");
+else alert("Obesidade grau 3");  
+</script>

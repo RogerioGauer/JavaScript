@@ -1,0 +1,51 @@
+	<script type="text/javascript">
+     
+    /*Primeiros Testes com JS
+	F.U.P. que receba dados de visitantes 
+	(nome, sexo, peso, altura) e informe: 
+	- Nome do homem mais alto 
+	- Nome da mulher mais magra
+    */
+
+	//declaração e iniciazação das vars
+	var resp = "S";
+	var nome = "";
+	var peso = 0;
+	var altu = 0;
+	var sexo = "";
+	
+	var nomemin = "";
+	var pesomin = 1000; //usado pelas mulheres
+	var nomemax = "";
+	var altumax = 0; //usado pelos homens
+	
+	//processamento
+	//operadores lógicos: &&, ||, !
+	while(resp == "S" || resp == "s")
+	{
+		nome = prompt("Informe seu NOME");
+		peso = prompt("Informe seu PESO");
+		altu = prompt("Informe sua ALTURA em \"cm\" ");
+		sexo = prompt("Sexo: (M | F)");
+		
+		if (sexo == "M" || sexo == "m") {
+			if (altu > altumax) {
+				altumax = altu;
+				nomemax = nome;
+			}
+		}
+		
+		if (sexo == "F" || sexo == "f") {
+			if (peso < pesomin) {
+				pesomin = peso;
+				nomemin = nome;
+			}
+		}
+		
+		resp = prompt("Tem mais? (S | N)");
+	}
+	
+	//saída
+	alert("Homem mais alto: " + nomemax);
+	alert("Mulher mais magra: " + nomemin);
+	</script>

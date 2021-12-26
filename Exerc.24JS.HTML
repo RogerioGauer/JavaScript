@@ -1,0 +1,31 @@
+<script type="text/javascript">
+		
+    //E.U.P. que mostre os números pares do intervalo entre 10 e 50
+    //e também quantos nros pares são, e a soma deles
+
+    var ini = prompt("Digite um número inicial (inteiro): ");
+    var fim = prompt("Digite um número final (inteiro): ");
+
+    //"gambiarra" para converter para número
+    ini = ini * 1; 
+    fim = fim * 1; 
+
+    //declaração e inicialização das variáveis
+    var contador = 0;
+    var soma = 0;
+
+    //processamento
+    for (nro=ini; nro<=fim; nro++) 
+    {
+        if (nro % 2 == 0) {
+            console.log("O numero "+ nro +" é PAR");
+            contador++;
+            soma = soma + nro; //soma += nro;
+        }
+    }
+
+    //mostrar o resultado
+    console.log("O total de numeros pares é: "+contador);
+    console.log("A soma de todos os pares é: "+soma);
+
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Exerc.31JS</title>
+</head>
+ 
+<body>
+
+	<h1>Orientação a Objetos com JS</h1>
+	Em JavaScript temos "coisas" prontas para usar 
+	do universo de O.O.: <br />
+	- String, Math, Array, Date, Object, Number <br />
+	- Elementos do HTML (navigator, window, document, form, image, etc) 
+	<br /><br />
+	
+	<form name="f1">
+		<input type="text" name="nome" />
+	</form>
+	
+	<script type="text/javascript">
+	//além dos objetos "prontos" que representam o HTML
+	//temos também Classes e funções prontas que não são do HTML
+	
+	document.write( Math.sin(123) + "<br />");
+	document.write( Math.pow(2,16) + "<br />" );
+	document.write( Math.sqrt(81) + "<br />" );
+	document.write( Math.ceil(6.2) + "<br />" );
+	document.write( Math.floor(6.9) + "<br />" );
+	document.write( Math.round(6.6) + "<br />" );
+	
+	//no JS TODOS os valores "texto entre aspas"
+	//são tratados como objetos do tipo String
+	var texto = "Esse é um texto de teste pra ver qualé";
+	document.write( texto.toUpperCase() + "<br />" );
+	document.write( texto.toLowerCase() + "<br />" );
+	//alert( texto.substring(10,15) ); //esquece esse aqui!!!
+	document.write( texto.substr(10,5) + "<br />" );
+	
+	//é igual ao que foi feito acima
+	var rui = new String("Agora declarando como um objeto");
+	document.write( rui.substr(0,5) + "<br />" );
+	
+	//classe que permite a criação de objetos de data/hora
+	var hoje = new Date();
+	var dia = hoje.getDate();
+	var mes = hoje.getMonth();
+	var ano = hoje.getYear();
+	var sem = hoje.getDay(); //número correspondente ao dia da semana
+	var tpo = hoje.getTime();
+	document.write( dia + "/" + mes + "/" + ano + "<br />" );
+	document.write("Nro de milisegundos desde 01/01/1970 " + tpo + "<br />");
+	
+	//classe que permite a criação de um "vetor"
+	var vet = new Array("dom", "seg", "ter", "qua", "qui", "sex", "sab");
+	document.write( "Dia da semana hoje: " + vet[sem] );
+	</script>
+	
+</body>
+</html>

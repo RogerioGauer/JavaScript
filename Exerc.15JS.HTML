@@ -1,0 +1,31 @@
+<script>
+
+var x1 = Math.floor(Math.random() * 10);
+var y1 = Math.floor(Math.random() * 10);
+var x2;
+var y2;
+var distancia = 0; //Sem o "do" a condição definida no while não seria executada, pois a variável distância é = 0. Ele executa o código, entre chaves, pelo menos uma vez antes de entrar no while.
+var contador = 1;
+
+do //do = faz: Executa o código entre chaves, pelo menos uma vez, antes de interpretar a condição estabelecida no while.
+{
+    x2 = prompt("Digite o valor de x:"); 
+    y2 = prompt("Digite o valor de y:");
+    distancia = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    alert("Esta é a tentativa " + contador);
+    alert("A distância ficou em " + distancia);
+    contador++; //contador++ = contador + 1.
+} 
+while ((distancia > 1) && (contador <= 10))
+
+if(distancia <= 1)
+{
+    alert("Tu chegaste no alvo.");
+}
+
+else
+{
+    alert("Tu ainda não chegaste no alvo.");
+}
+    
+</script>

@@ -1,0 +1,21 @@
+<script>
+//While = Enquanto. 
+
+var x1 = 10;
+var y1 = 7;
+var x2;
+var y2;
+var distancia = 100;
+
+while (distancia > 1) //Enquanto distancia for maior do que 1.
+{
+    x2 = prompt("Digite o valor de x:"); 
+    y2 = prompt("Digite o valor de y:");
+    distancia = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    alert("A dist?ncia ficou em " + distancia);
+}
+
+alert("Tu chegaste no alvo.");
+
+//Math.sqrt = Math de Matem?tica e, sqrt de ra?z quadrada.
+</script>

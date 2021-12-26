@@ -1,0 +1,38 @@
+<script>
+var numero1 = parseInt(prompt("Digite o primeiro número:"));
+var operacao = prompt("Digite a operação (+ ,- , * ou /):");
+var numero2 = parseInt(prompt("Digite o segundo número:"));
+
+if(operacao == "+")
+{
+    var resultado = (numero1 + numero2);
+    alert("O resultado é: " + resultado);
+}
+
+else
+{ 
+    if(operacao == "-")
+    {
+        var resultado = (numero1 - numero2);
+        alert("O resultado é " + resultado);
+    }
+
+else
+{
+    if(operacao == "*")
+    {
+        var resultado = (numero1 * numero2);
+        alert("O resultado é " + resultado);
+    } 
+
+else
+{
+    if(operacao == "/")
+    {
+        var resultado = (numero1 / numero2);
+        alert("O resultado é " + resultado);
+    }
+  }
+ }
+}
+</script>

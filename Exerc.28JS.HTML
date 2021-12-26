@@ -1,0 +1,40 @@
+	<script type="text/javascript">
+	/*F.U.P. que receba dois números (inicial e final)
+	e mostre os números pares do intervalo,
+	quantos são e a soma desses números pares*/
+
+	//declaração e inicialização das variáveis
+	var msg = "";
+	var num1 = 0;
+	var num2 = 0;
+	var soma = 0;
+	var cont = 0;
+	
+	//entrada
+	num1 = prompt("Informe um nro inteiro inicial");
+	num1 = num1 * 1;
+	num2 = prompt("Informe outro nro inteiro final");
+	num2 = num2 * 1;
+	
+	//teste básico para tratar a entrada invertida
+	if (num1 > num2) {
+		var aux = num1;
+		num1 = num2;
+		num2 = aux;
+	}
+	
+	//processamento
+	//msg += 2; (é o mesmo que) msg = msg + 2;
+	for (i=num1; i<=num2; i++) {
+		if (i % 2 == 0) {
+			msg += i + " - ";
+			soma += i;
+			cont++;
+		}
+	}
+	
+	//saída
+	alert(msg);
+	alert("Qtd de pares: " + cont);
+	alert("Soma dos pares: " + soma);
+	</script>

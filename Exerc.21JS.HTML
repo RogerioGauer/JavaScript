@@ -1,0 +1,28 @@
+<script>
+
+// Cálculo do Fatorial com Função:
+var entrada = prompt("Entre com o número para calcular o fatorial:");
+
+function fatorial(fator)
+{
+    if(fator <= 2)
+    return fator;
+    return fator * fatorial(fator - 1);
+}
+
+alert("O fatorial é " + fatorial(entrada));
+
+/* Outra forma de calcular o Fatorial:
+var entrada = prompt("Entre com o número para calcular o fatorial:");
+var fatorial = entrada;
+
+while(entrada > 2)
+{
+    entrada--;
+    fatorial = fatorial * entrada;         
+}
+
+alert("O fatorial é: " + fatorial);
+*/
+
+</script>

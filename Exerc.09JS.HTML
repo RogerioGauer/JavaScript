@@ -1,0 +1,89 @@
+<script>
+var x = 5
+typeof (x)
+"number"
+
+var y = "Olá Mundo"
+typeof (y)
+"string"
+
+
+
+
+var w = false
+typeof (w)
+"boolean"
+
+var z = true
+typeof (z)
+"boolean"
+
+var z = true
+if (z) alert("É verdadeiro")
+//Por ser verdadeiro alertou.
+
+var z = false
+if (z) alert("É verdadeiro")
+//Por ser falso não alertou.
+
+
+
+
+x = 5
+5
+x > 6
+false
+z = x > 6
+false
+
+x = 3
+3
+x == 4
+false
+x == 3
+true
+
+
+
+//Operadores para valores "boolean":
+
+//"!" = Not = Não: Ele inverte o valor boolean.
+z = false
+false
+!z 
+true
+
+x = 3 
+3
+//A despeito do alerta ser VERDADEIRO, NÃO ALERTOU por ter o "!" antes da variável x.
+if ( ! (x < 4)) alert("x não é menor do que 4") 
+
+//A despeito do alerta ser FALSO, ALERTOU por ter o "!" antes da variável x.
+if ( ! (x > 4)) alert("x não é maior do que 4") 
+
+
+//"&&" = And = E: Ele junta valores boolean, comparando com outros.
+x = 5
+5
+
+(x > 1) && (x > 2)
+true
+
+(x > 1) && (x > 2) && (x > 6)
+false //Falso apenas por (x > 6).
+
+
+//"||" = Or = Ou: Ele compara valores boolean com outros, bastando apenas um ser verdadeiro para retornar true.
+x = 5
+5
+
+(x == 5) || (x < 4) 
+true //Verdadeiro por (x == 5).
+
+(x < 5) || (x < 4) 
+false //Falso por nenhum deles corresponder a x.
+
+
+(x < 5) || (x < 4) || (x == 5) 
+true //Verdadeiro por apenas um deles ser verdadeiro, ou seja (x == 5).
+</script>

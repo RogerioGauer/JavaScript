@@ -1,0 +1,30 @@
+<script>
+
+var x1 = Math.floor(Math.random() * 10);
+var y1 = Math.floor(Math.random() * 10);
+var x2;
+var y2;
+var distancia = 100;
+var contador = 1;
+
+while ((distancia > 1) && (contador <= 10)) //Enquanto distancia for maior do que 1 e, contador for menor ou igual a 10.
+{
+    x2 = prompt("Digite o valor de x:"); 
+    y2 = prompt("Digite o valor de y:");
+    distancia = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    alert("Esta é a tentativa " + contador);
+    alert("A distância ficou em " + distancia);
+    contador++; //contador++ = contador + 1.
+}
+
+if(distancia <= 1)
+{
+    alert("Tu chegaste no alvo.");
+}
+
+else
+{
+    alert("Tu ainda não chegaste no alvo.");
+}
+
+</script>
